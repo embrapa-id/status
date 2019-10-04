@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.7c0cd01ff94b46bbc95fa8aed49731f2.js"
+  "/precache-manifest.18859c36bc7f7946db657f0dc5cf36a8.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "status"});
+workbox.core.setCacheNameDetails({prefix: "embrapa-status"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
