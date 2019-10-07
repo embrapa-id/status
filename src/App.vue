@@ -64,10 +64,11 @@
               persistent-hint
               append-outer-icon="location_city"
               return-object
+              v-on:change="changeUnity()"
             ></v-select>
         </v-flex>
 
-        <v-flex v-if="cLocal > 0" class="d-flex justify-space-between" xs12 md10 offset-md-1 xl6 offset-xl-3>
+        <v-flex v-if="cLocal.sum > 0" class="d-flex justify-space-between" xs12 md10 offset-md-1 xl6 offset-xl-3>
           <v-progress-linear indeterminate></v-progress-linear>
         </v-flex>
 
@@ -77,9 +78,17 @@
               <v-expansion-panel-header  disable-icon-rotate>
                 {{ item.name }}
                 <template v-slot:actions>
-                  <v-chip class="py-0" color="green" label text-color="white">
-                    Operacional
+                  <v-chip v-show="item.status === undefined" class="py-0" color="yellow darken-3" label text-color="white">
+                    Verificando...
+                    <v-icon right style="color: #fff;">hourglass_empty</v-icon>
+                  </v-chip>
+                  <v-chip v-show="item.status === true" class="py-0" color="green" label text-color="white">
+                    Operacional!
                     <v-icon right style="color: #fff;">done</v-icon>
+                  </v-chip>
+                  <v-chip v-show="item.status === false" class="py-0" color="red" label text-color="white">
+                    Inacessível!
+                    <v-icon right style="color: #fff;">error</v-icon>
                   </v-chip>
                 </template>
               </v-expansion-panel-header>
@@ -90,6 +99,19 @@
           </v-expansion-panels>
         </v-flex>
       </v-layout>
+
+      <v-dialog v-model="dialog" persistent max-width="290">
+        <v-card>
+          <v-card-text>
+            <p class="text-center pt-4"><v-icon large color="red">cloud_off</v-icon></p>
+            Você está sem conexão com a internet! Ela é necessária para utilizar este serviço. Por favor, verifique sua rede de dados.
+          </v-card-text>
+          <v-card-actions>
+            <div class="flex-grow-1"></div>
+            <v-btn color="green darken-1" text @click="reload()">Tentar Novamente</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-container>
   </v-app>
 </template>
@@ -106,6 +128,8 @@ import local from './settings/services/local.json'
 
 export default {
   data: () => ({
+    online: false,
+    dialog: false,
     unity: null,
     unities: unities,
     sExternal: external,
@@ -116,15 +140,27 @@ export default {
   }),
   beforeMount () {
     this.unity = unities[0]
+
+    if (typeof window.navigator.onLine === 'undefined') {
+      this.online = true
+    } else {
+      this.online = window.navigator.onLine
+    }
   },
   mounted () {
-    this.sCorporate.forEach(item => {
-      this.cCorporate.sum++
+    if (this.online) {
+      this.sCorporate.forEach(item => {
+        this.cCorporate.sum++
 
-      console.log('Checking ' + item.url)
+        console.log('Checking ' + item.url)
 
-      this.check(item, this.cCorporate)
-    })
+        this.check(item, this.cCorporate)
+      })
+
+      this.checkUnitiesServices()
+    } else {
+      this.dialog = true
+    }
   },
   methods: {
     check (item, counter) {
@@ -134,7 +170,11 @@ export default {
 
       let options = {
         httpsAgent: agent,
-        crossdomain: true
+        crossdomain: true,
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*'
+        }
       }
 
       axios.head(item.url, options).then(response => {
@@ -148,6 +188,25 @@ export default {
         console.log('counter: ' + counter.sum)
         this.$forceUpdate()
       })
+    },
+    reload () {
+      location.reload()
+    },
+    changeUnity () {
+      this.$forceUpdate()
+
+      this.checkUnitiesServices()
+    },
+    checkUnitiesServices () {
+      if (this.sLocal[this.unity.domain] !== undefined) {
+        this.sLocal[this.unity.domain].forEach(item => {
+          this.cLocal.sum++
+
+          console.log('Checking ' + item.url)
+
+          this.check(item, this.cLocal)
+        })
+      }
     }
   }
 }

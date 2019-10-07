@@ -1,5 +1,7 @@
 {
     "cnpgc": [
-        { "name": "Pandora", "url": "https://pandora.cnpgc.embrapa.br" }
+        { "name": "Pandora", "url": "https://pandora.cnpgc.embrapa.br" },
+        { "name": "SAGU", "url": "https://sagu.cnpgc.embrapa.br" },
+        { "name": "Reserva de Salas", "url": "https://rs.cnpgc.embrapa.br" }
     ]
 }
