@@ -119,7 +119,7 @@
           </v-expansion-panels>
         </v-flex>
 
-        <v-flex v-if="sLocal[unity.domain] === undefined" class="d-flex justify-center mb-10" md10 offset-md-1 offset-xl-3 xl6 xs12>
+        <v-flex v-if="sLocal[unity.domain] === undefined" class="d-flex justify-center mb-12" md10 offset-md-1 offset-xl-3 xl6 xs12>
           <v-alert type="error">
             Não há serviços digitais locais cadastrados para a {{ unity.name }}.
           </v-alert>

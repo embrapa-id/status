@@ -119,7 +119,7 @@
     ],
     "cnpae": [
         {
-            "name": "Embrapa Agroenergia &#8211; CNPAE &#8211; Documentação e afins!",
+            "name": "Documentação e afins",
             "url": "https://doc.cnpae.embrapa.br"
         },
         {
@@ -131,15 +131,11 @@
             "url": "https://lbb.cnpae.embrapa.br"
         },
         {
-            "name": "Sign in · GitLab",
+            "name": "GitLab",
             "url": "https://gitlab.cnpae.embrapa.br"
         },
         {
-            "name": "Embrapa Agroenergia - Portal Embrapa",
-            "url": "https://sistemas.cnpae.embrapa.br"
-        },
-        {
-            "name": "OTRS Redirect",
+            "name": "OTRS",
             "url": "https://centralservicos.cnpae.embrapa.br"
         },
         {
