@@ -1,7 +1,464 @@
 {
     "cnpgc": [
-        { "name": "Pandora", "url": "https://pandora.cnpgc.embrapa.br" },
-        { "name": "SAGU", "url": "https://sagu.cnpgc.embrapa.br" },
-        { "name": "Reserva de Salas", "url": "https://rs.cnpgc.embrapa.br" }
+        {
+            "name": "Pandora",
+            "url": "https://pandora.cnpgc.embrapa.br"
+        },
+        {
+            "name": "SAGU",
+            "url": "https://sagu.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Reserva de Salas",
+            "url": "https://rs.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Filestash",
+            "url": "https://box.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Subversion",
+            "url": "https://svn.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Projetos de Bioinformática",
+            "url": "https://bio.cnpgc.embrapa.br"
+        },
+        {
+            "name": "API Backend",
+            "url": "https://backend.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Hotsites",
+            "url": "https://cloud.cnpgc.embrapa.br"
+        },
+        {
+            "name": "GitLab",
+            "url": "https://git.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Engeman",
+            "url": "https://engeman.cnpgc.embrapa.br"
+        }
+    ],
+    "cnpgl": [
+        {
+            "name": "Gisleite",
+            "url": "https://gisleite.cnpgl.embrapa.br"
+        }
+    ],
+    "cnpmf": [
+        {
+            "name": "SAGU",
+            "url": "https://sagu.cnpmf.embrapa.br"
+        }
+    ],
+    "cnpaf": [
+        {
+            "name": "SAGU",
+            "url": "https://sagu.cnpaf.embrapa.br"
+        }
+    ],
+    "cnpf": [
+        {
+            "name": "Página do Gerson Oaida",
+            "url": "https://alamo.cnpf.embrapa.br"
+        },
+        {
+            "name": "Email Marketing",
+            "url": "https://ceibo.cnpf.embrapa.br"
+        }
+    ],
+    "cpamn": [
+        {
+            "name": "Rocket.Chat",
+            "url": "https://limao2.cpamn.embrapa.br"
+        },
+        {
+            "name": "Sistemas da Embrapa Meio-Norte",
+            "url": "https://sistemas.cpamn.embrapa.br"
+        },
+        {
+            "name": "SAGU",
+            "url": "https://sagu.cpamn.embrapa.br"
+        }
+    ],
+    "cenargen": [
+        {
+            "name": "AleloWiki",
+            "url": "https://alelowiki.cenargen.embrapa.br"
+        },
+        {
+            "name": "AleloTutor",
+            "url": "https://alelotutor.cenargen.embrapa.br"
+        }
+    ],
+    "cnpm": [
+        {
+            "name": "LimeSurvey",
+            "url": "https://survey.cnpm.embrapa.br"
+        },
+        {
+            "name": "GitLab",
+            "url": "https://gitlab.cnpm.embrapa.br"
+        }
+    ],
+    "cnpt": [
+        {
+            "name": "EECTOnline",
+            "url": "https://eectonline.cnpt.embrapa.br"
+        },
+        {
+            "name": "Laboratório de Solos",
+            "url": "https://rolas.cnpt.embrapa.br"
+        },
+        {
+            "name": "LimeSurvey",
+            "url": "https://piwik.cnpt.embrapa.br"
+        }
+    ],
+    "cnpae": [
+        {
+            "name": "Embrapa Agroenergia &#8211; CNPAE &#8211; Documentação e afins!",
+            "url": "https://doc.cnpae.embrapa.br"
+        },
+        {
+            "name": "Embrapa Agroenergia",
+            "url": "https://cloud1.cnpae.embrapa.br"
+        },
+        {
+            "name": "A Bioinformática e o LBB",
+            "url": "https://lbb.cnpae.embrapa.br"
+        },
+        {
+            "name": "Sign in · GitLab",
+            "url": "https://gitlab.cnpae.embrapa.br"
+        },
+        {
+            "name": "Embrapa Agroenergia - Portal Embrapa",
+            "url": "https://sistemas.cnpae.embrapa.br"
+        },
+        {
+            "name": "OTRS Redirect",
+            "url": "https://centralservicos.cnpae.embrapa.br"
+        },
+        {
+            "name": "Comitê Local de Publicações",
+            "url": "https://jilo.cnpae.embrapa.br"
+        },
+        {
+            "name": "Taiga",
+            "url": "https://taiga.cnpae.embrapa.br"
+        }
+    ],
+    "cnptia": [
+        {
+            "name": "System Dynamics Simulator User Interface",
+            "url": "https://www.sdsim.cnptia.embrapa.br"
+        },
+        {
+            "name": "GPDS - Gerenciador de Projetos de Desenvolvimento de Software",
+            "url": "https://www.gpds.cnptia.embrapa.br"
+        },
+        {
+            "name": "7º GeoPantanal - Simpósio de Geotecnologias no Pantanal",
+            "url": "https://www.geopantanal.cnptia.embrapa.br"
+        },
+        {
+            "name": "Repositório Saltus",
+            "url": "https://www.saltus-rep.cnptia.embrapa.br"
+        },
+        {
+            "name": "Modelagem Agroambiental",
+            "url": "https://www.lma.cnptia.embrapa.br"
+        },
+        {
+            "name": "PS3V",
+            "url": "https://www.ps3dv.cbi.cnptia.embrapa.br"
+        },
+        {
+            "name": "SoilGrid",
+            "url": "https://www.soilgrid-agmip.cnptia.embrapa.br"
+        },
+        {
+            "name": "BDPA [Homologação] - Bases de Dados da Pesquisa Agropecuária",
+            "url": "https://www.bdpa-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "SIExp - Sistema de Informação de Experimentos da Embrapa",
+            "url": "https://www.siexp.cnptia.embrapa.br"
+        },
+        {
+            "name": "Matomo",
+            "url": "https://www.webstats.cnptia.embrapa.br"
+        },
+        {
+            "name": "Projeto Agrohidro",
+            "url": "https://www.agrohidro-rep.cnptia.embrapa.br"
+        },
+        {
+            "name": "Subversion",
+            "url": "https://www.svnserver.cnptia.embrapa.br"
+        },
+        {
+            "name": "SIExp [Pré] - Sistema de Informação de Experimentos da Embrapa",
+            "url": "https://www.siexp-pre.cnptia.embrapa.br"
+        },
+        {
+            "name": "GeoCloud - Catalogo",
+            "url": "https://www.geocloud-pre.cnptia.embrapa.br"
+        },
+        {
+            "name": "Kamukaia",
+            "url": "https://www.kamukaia-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "ISMB 2006: Fortaleza, Brazil, August 6-10",
+            "url": "https://ismb2006.cbi.cnptia.embrapa.br"
+        },
+        {
+            "name": "Infoteca-e [Homologação]",
+            "url": "https://www.infoteca-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "9º Congresso Interinstitucional de Iniciação Científica – CIIC 2015",
+            "url": "https://www.ciic.cnptia.embrapa.br"
+        },
+        {
+            "name": "SIExp [Homologação] - Sistema de Informação de Experimentos da Embrapa",
+            "url": "https://www.siexp-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "SIAGEO Amazônia",
+            "url": "https://www.amazonia.cnptia.embrapa.br"
+        },
+        {
+            "name": "Sistema de Informação de Solos Brasileiros",
+            "url": "https://www.bdsolos.cnptia.embrapa.br"
+        },
+        {
+            "name": "Alice [Homologação]",
+            "url": "https://www.alice-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "Acompanhamento de Tarefas",
+            "url": "https://www.tarefas.cnptia.embrapa.br"
+        },
+        {
+            "name": "NextCloud",
+            "url": "https://www.cloud.cnptia.embrapa.br"
+        },
+        {
+            "name": "Ainfo - Sistema de Gestão de Bibliotecas",
+            "url": "https://ainfo.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agropedia Brasilis",
+            "url": "https://www.ainfo.cnptia.embrapa.br"
+        },
+        {
+            "name": "Alice",
+            "url": "https://www.alice.cnptia.embrapa.br"
+        },
+        {
+            "name": "SABIIA - Sistema Aberto e Integrado de Informação em Agricultura",
+            "url": "https://www.sabiia.cnptia.embrapa.br"
+        },
+        {
+            "name": "Infoteca-e",
+            "url": "https://www.infoteca.cnptia.embrapa.br"
+        },
+        {
+            "name": "BDPA - Bases de Dados da Pesquisa Agropecuária",
+            "url": "https://www.prodemb.cnptia.embrapa.br"
+        },
+        {
+            "name": "Rede de Bibliotecas da Área de Engenharia e Arquitetura",
+            "url": "https://www.rebae.cnptia.embrapa.br"
+        },
+        {
+            "name": "SIMAFF-Café",
+            "url": "https://www.simaff-cafe.cnptia.embrapa.br"
+        },
+        {
+            "name": "Diagnose",
+            "url": "https://www.diagnose.cnptia.embrapa.br"
+        },
+        {
+            "name": "Rede Pecus - Repositório de Dados",
+            "url": "https://www.pecus.cnptia.embrapa.br"
+        },
+        {
+            "name": "Sistemas de Produção",
+            "url": "https://www.spo.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agência Embrapa de Informação Tecnológica - Ageitec",
+            "url": "https://www.agencia.cnptia.embrapa.br"
+        },
+        {
+            "name": "Vellozia",
+            "url": "https://www.vellozia.cnptia.embrapa.br"
+        },
+        {
+            "name": "Repositório IPAGRIDADOS",
+            "url": "https://www.dados.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agência Embrapa de Informação Tecnológica",
+            "url": "https://www.pubpgc20.cnptia.embrapa.br"
+        },
+        {
+            "name": "TerraClass",
+            "url": "https://www.terraclass.cnptia.embrapa.br"
+        },
+        {
+            "name": "AgroAPI [Homologação] - Plataforma de APIs da Embrapa",
+            "url": "https://www.agroapi-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "GeoNode",
+            "url": "https://www.agrotaggeo.cnptia.embrapa.br"
+        },
+        {
+            "name": "Bioinformatics Laboratory",
+            "url": "https://www.lbc.cnptia.embrapa.br"
+        },
+        {
+            "name": "WikiPragas",
+            "url": "https://www.wikipragas.cnptia.embrapa.br"
+        },
+        {
+            "name": "Bioinformatics Laboratory",
+            "url": "https://www.cbi.cnptia.embrapa.br"
+        },
+        {
+            "name": "GeoNode",
+            "url": "https://geoinfo.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agropedia Brasilis",
+            "url": "https://www.lmb.cnptia.embrapa.br"
+        },
+        {
+            "name": "EMBnet Brazil",
+            "url": "https://embnet-br.cbi.cnptia.embrapa.br"
+        },
+        {
+            "name": "PS3A",
+            "url": "https://www.ps3a.cbi.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agropedia Brasilis",
+            "url": "https://www.agropediabrasilis.cnptia.embrapa.br"
+        },
+        {
+            "name": "RedeAP",
+            "url": "https://www.redeap.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agropedia Brasilis",
+            "url": "https://www.agropedia-brasilis.cnptia.embrapa.br"
+        },
+        {
+            "name": "Repositório Digipathos",
+            "url": "https://www.digipathos-rep.cnptia.embrapa.br"
+        },
+        {
+            "name": "Sistemas de Produção",
+            "url": "https://sistemasdeproducao.cnptia.embrapa.br"
+        },
+        {
+            "name": "Piwik",
+            "url": "https://www.logsweb.cnptia.embrapa.br"
+        },
+        {
+            "name": "Bioinformatics Laboratory",
+            "url": "https://www.sting.cnptia.embrapa.br"
+        },
+        {
+            "name": "Plataforma Agrotag [Homologação]",
+            "url": "https://www.agrotag-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "PLANEJA - Sistema de Suporte ao Planejamento Agricola Municipal",
+            "url": "https://www.planeja.cnptia.embrapa.br"
+        },
+        {
+            "name": "GeoNode",
+            "url": "https://www.paisagenslidar.cnptia.embrapa.br"
+        },
+        {
+            "name": "e-Termos - Ambiente Colaborativo Web de Gestão Terminológica",
+            "url": "https://www.etermos.cnptia.embrapa.br"
+        },
+        {
+            "name": "Rede Agro Nano",
+            "url": "https://www.redeagronano.cnptia.embrapa.br"
+        },
+        {
+            "name": "Sistema de Informação de Solos Brasileiros",
+            "url": "https://www.sisolos.cnptia.embrapa.br"
+        },
+        {
+            "name": "NTI",
+            "url": "https://www.nti.cnptia.embrapa.br"
+        },
+        {
+            "name": "WebagritecJS [Homologação]",
+            "url": "https://www.agritec-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "Dendro",
+            "url": "https://dendro.cnptia.embrapa.br"
+        },
+        {
+            "name": "WebagritecJS",
+            "url": "https://www.agritec.cnptia.embrapa.br"
+        },
+        {
+            "name": "Invernada",
+            "url": "https://www.invernada.cnptia.embrapa.br"
+        },
+        {
+            "name": "Repositório Solovivo",
+            "url": "https://www.solovivo-rep.cnptia.embrapa.br"
+        },
+        {
+            "name": "BDPA - Bases de Dados da Pesquisa Agropecuária",
+            "url": "https://www.bdpa.cnptia.embrapa.br"
+        },
+        {
+            "name": "Repositório Agrocomputing.net",
+            "url": "https://www.agrocomp-rep.cnptia.embrapa.br"
+        },
+        {
+            "name": "Agroseguro",
+            "url": "https://www.agroseguro.cnptia.embrapa.br"
+        },
+        {
+            "name": "GitLab",
+            "url": "https://www.gitlab.cnptia.embrapa.br"
+        },
+        {
+            "name": "GenClima [Homologação]",
+            "url": "https://www.genclima-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "Ainfo [Homologação] - Sistema de Gestão de Bibliotecas",
+            "url": "https://www.ainfo-h.cnptia.embrapa.br"
+        },
+        {
+            "name": "UMiP GenClima",
+            "url": "https://www.genclima.cnptia.embrapa.br"
+        },
+        {
+            "name": "AgroAPI - Plataforma de APIs da Embrapa",
+            "url": "https://www.agroapi.cnptia.embrapa.br"
+        },
+        {
+            "name": "Serviço de Senha",
+            "url": "https://www.senhas.cnptia.embrapa.br"
+        }
     ]
 }

@@ -78,6 +78,7 @@
             solo
             v-model="unity"
             v-on:change="changeUnity()"
+            :disabled="cLocal.sum > 0"
           ></v-select>
         </v-flex>
 
@@ -116,6 +117,12 @@
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
+        </v-flex>
+
+        <v-flex v-if="sLocal[unity.domain] === undefined" class="d-flex justify-center mb-10" md10 offset-md-1 offset-xl-3 xl6 xs12>
+          <v-alert type="error">
+            Não há serviços digitais locais cadastrados para a {{ unity.name }}.
+          </v-alert>
         </v-flex>
       </v-layout>
 

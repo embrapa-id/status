@@ -1,5 +1,11 @@
 [
     { "name": "Portal", "url": "https://www.embrapa.br" },
     { "name": "Intranet", "url": "https://intranet.embrapa.br" },
-    { "name": "Correio Eletrônico", "url": "https://correio.embrapa.br" }
+    { "name": "Correio Eletrônico", "url": "https://correio.embrapa.br" },
+    { "name": "VWPonto", "url": "https://vwponto.sede.embrapa.br" },
+    { "name": "Banco Multimídia da Embrapa (BME)", "url": "https://bme.sede.embrapa.br" },
+    { "name": "Balanço Social", "url": "https://bs.sede.embrapa.br" },
+    { "name": "Mantis", "url": "https://mantis.sede.embrapa.br" },
+    { "name": "Kanban", "url": "https://kanban.sede.embrapa.br" },
+    { "name": "Sistema Eletrônico de Editoração de Revistas", "url": "https://seer.sede.embrapa.br" }
 ]
