@@ -1,6 +1,6 @@
 [
     { "name": "Portal", "url": "https://www.embrapa.br" },
-    { "name": "Intranet", "url": "https://intranet.embrapa.br" },
+    { "name": "Central de TI", "url": "https://centralti.embrapa.br" },
     { "name": "Correio Eletrônico", "url": "https://correio.embrapa.br" },
     { "name": "VWPonto", "url": "https://vwponto.sede.embrapa.br" },
     { "name": "Banco Multimídia da Embrapa (BME)", "url": "https://bme.sede.embrapa.br" },

@@ -142,7 +142,7 @@
 
       <v-footer absolute class="font-weight-light" color="blue-grey darken-1" dark padless>
         <v-col class="text-center" cols="12">
-          {{ new Date().getFullYear() }} &bull;
+          &copy;{{ new Date().getFullYear() }} &bull;
           <a
             href="https://www.embrapa.br/gado-de-corte"
             style="color: #FFF; text-decoration: none;"
@@ -150,6 +150,13 @@
           >
             <strong>Embrapa Gado de Corte</strong>
           </a>
+
+          <v-chip small label color="white" light class="ml-2 px-1">
+            <v-avatar class="mr-2">
+              <v-icon>update</v-icon>
+            </v-avatar>
+            <b>v{{ version }}</b>
+          </v-chip>
         </v-col>
       </v-footer>
     </v-container>
@@ -165,6 +172,8 @@ import external from './settings/services/external.json'
 import corporate from './settings/services/corporate.json'
 import local from './settings/services/local.json'
 
+import pck from '../package.json'
+
 export default {
   data: () => ({
     dialog: false,
@@ -174,7 +183,8 @@ export default {
     sCorporate: corporate,
     sLocal: local,
     cCorporate: { sum: 0 },
-    cLocal: { sum: 0 }
+    cLocal: { sum: 0 },
+    version: pck.version
   }),
   localStorage: {
     unity: {
