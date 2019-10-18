@@ -13,8 +13,8 @@
             @click="refresh()"
             class="ma-2 white--text"
             color="blue-grey darken-1"
-            x-large
             dark
+            x-large
           >
             Atualizar
             <v-icon dark right>refresh</v-icon>
@@ -37,21 +37,17 @@
                 <template v-slot:actions>
                   <v-chip
                     class="py-0"
-                    color="yellow darken-3"
+                    color="blue darken-1"
                     label
                     text-color="white"
-                    v-show="item.status === undefined || item.status === null"
+                    v-if="item.status === undefined || item.status === null"
                   >
                     Verificando...
                     <v-icon right style="color: #fff;">hourglass_empty</v-icon>
                   </v-chip>
-                  <v-chip class="py-0" color="green" label text-color="white" v-show="item.status === true">
-                    Operacional!
-                    <v-icon right style="color: #fff;">done</v-icon>
-                  </v-chip>
-                  <v-chip class="py-0" color="red" label text-color="white" v-show="item.status === false">
-                    Inacessível!
-                    <v-icon right style="color: #fff;">error</v-icon>
+                  <v-chip class="py-0" :color="item.status.color" label text-color="white" v-else>
+                    {{ item.status.label }}
+                    <v-icon right style="color: #fff;">{{ item.status.icon }}</v-icon>
                   </v-chip>
                 </template>
               </v-expansion-panel-header>
@@ -68,6 +64,7 @@
 
         <v-flex class="d-flex justify-center mb-3" md6 offset-md-3 offset-xl-4 xl4 xs12>
           <v-select
+            :disabled="cLocal.sum > 0"
             :hint="'Em ' + unity.local"
             :items="unities"
             append-outer-icon="location_city"
@@ -78,7 +75,6 @@
             solo
             v-model="unity"
             v-on:change="changeUnity()"
-            :disabled="cLocal.sum > 0"
           ></v-select>
         </v-flex>
 
@@ -94,21 +90,17 @@
                 <template v-slot:actions>
                   <v-chip
                     class="py-0"
-                    color="yellow darken-3"
+                    color="blue darken-1"
                     label
                     text-color="white"
-                    v-show="item.status === undefined || item.status === null"
+                    v-if="item.status === undefined || item.status === null"
                   >
                     Verificando...
                     <v-icon right style="color: #fff;">hourglass_empty</v-icon>
                   </v-chip>
-                  <v-chip class="py-0" color="green" label text-color="white" v-show="item.status === true">
-                    Operacional!
-                    <v-icon right style="color: #fff;">done</v-icon>
-                  </v-chip>
-                  <v-chip class="py-0" color="red" label text-color="white" v-show="item.status === false">
-                    Inacessível!
-                    <v-icon right style="color: #fff;">error</v-icon>
+                  <v-chip class="py-0" :color="item.status.color" label text-color="white" v-else>
+                    {{ item.status.label }}
+                    <v-icon right style="color: #fff;">{{ item.status.icon }}</v-icon>
                   </v-chip>
                 </template>
               </v-expansion-panel-header>
@@ -119,10 +111,16 @@
           </v-expansion-panels>
         </v-flex>
 
-        <v-flex v-if="sLocal[unity.domain] === undefined" class="d-flex justify-center mb-12" md10 offset-md-1 offset-xl-3 xl6 xs12>
-          <v-alert type="error">
-            Não há serviços digitais locais cadastrados para a {{ unity.name }}.
-          </v-alert>
+        <v-flex
+          class="d-flex justify-center mb-12"
+          md10
+          offset-md-1
+          offset-xl-3
+          v-if="sLocal[unity.domain] === undefined"
+          xl6
+          xs12
+        >
+          <v-alert type="error">Não há serviços digitais locais cadastrados para a {{ unity.name }}.</v-alert>
         </v-flex>
       </v-layout>
 
@@ -151,7 +149,7 @@
             <strong>Embrapa Gado de Corte</strong>
           </a>
 
-          <v-chip small label color="white" light class="ml-2 px-1">
+          <v-chip class="ml-2 px-1" color="white" label light small>
             <v-avatar class="mr-2">
               <v-icon>update</v-icon>
             </v-avatar>
@@ -184,7 +182,13 @@ export default {
     sLocal: local,
     cCorporate: { sum: 0 },
     cLocal: { sum: 0 },
-    version: pck.version
+    version: pck.version,
+    status: {
+      OK: { label: 'Operacional', color: 'green', icon: 'done' },
+      DOWN: { label: 'Inacessível', color: 'red', icon: 'error' },
+      TIMEOUT: { label: 'Timeout', color: 'orange', icon: 'timer_off' },
+      SLOW: { label: 'Lentidão', color: 'brown', icon: 'access_time' }
+    }
   }),
   localStorage: {
     unity: {
@@ -232,15 +236,41 @@ export default {
       }
     },
     check (item, counter) {
-      fetch(item.url, { method: 'HEAD', mode: 'no-cors' }).then(response => {
-        console.log('Ok to ' + item.url + '!')
-        item.status = true
+      const start = new Date().getTime()
+
+      this.timeout(10000, fetch(item.url, { method: 'HEAD', mode: 'no-cors' })).then(response => {
+        const time = new Date().getTime() - start
+
+        console.log('Ok to ' + item.url + ' in ' + time + ' seconds!')
+
+        item.status = time < 5000 ? this.status.OK : this.status.SLOW
       }).catch(error => {
-        console.log('Failed to ' + item.url + ' - ' + JSON.stringify(error))
-        item.status = false
+        const time = new Date().getTime() - start
+
+        console.log('Failed to ' + item.url + ' in ' + time + ' seconds! - ' + JSON.stringify(error))
+
+        item.status = time < 10000 ? this.status.DOWN : this.status.TIMEOUT
       }).finally(() => {
         counter.sum--
         this.$forceUpdate()
+      })
+    },
+    timeout (ms, promise) {
+      return new Promise((resolve, reject) => {
+        const id = setTimeout(() => {
+          reject(new Error('TIMEOUT'))
+        }, ms)
+
+        promise.then(
+          (res) => {
+            clearTimeout(id)
+            resolve(res)
+          },
+          (err) => {
+            clearTimeout(id)
+            reject(err)
+          }
+        )
       })
     },
     reload () {
