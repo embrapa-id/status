@@ -34,7 +34,7 @@ Para adicionar novos serviços à ferramenta, acesse o diretório ```/src/settin
 
 > **Atenção!** Utilize um plugin para **ESLint** em sua IDE de desenvolvimento de forma a manter o estilo padronizado do código e mitigar erros de implementação.
 
-Para enviar suas alterações para o repositório, você deve criar um *merge request*. Existem duas formas de fazer isso. A primeira, é solcitar acesso ao repositório. Para isso, entre em contato comigo via WhastApp](https://whats.link/carromeu). A segunda, é criando primeiramente seu próprio *fork* do projeto. Veja a [documentação do GitHub](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html) para maiores informações.
+Para enviar suas alterações para o repositório, você deve criar um *merge request*. Existem duas formas de fazer isso. A primeira, é solcitar acesso ao repositório. Para isso, [entre em contato comigo via WhastApp](https://whats.link/carromeu). A segunda, é criando primeiramente seu próprio *fork* do projeto. Veja a [documentação do GitHub](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html) para maiores informações.
 
 ## Informações Importantes
 
