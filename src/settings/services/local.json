@@ -29,6 +29,10 @@
             "url": "https://backend.cnpgc.embrapa.br"
         },
         {
+            "name": "API Sandbox",
+            "url": "https://sandbox.cnpgc.embrapa.br"
+        },
+        {
             "name": "Hotsites",
             "url": "https://cloud.cnpgc.embrapa.br"
         },
@@ -39,6 +43,10 @@
         {
             "name": "Engeman",
             "url": "https://engeman.cnpgc.embrapa.br"
+        },
+        {
+            "name": "OpenVPN",
+            "url": "https://openvpn.cnpgc.embrapa.br:9443"
         }
     ],
     "cnpgl": [
