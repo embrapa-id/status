@@ -36,6 +36,15 @@ Para adicionar novos serviços à ferramenta, acesse o diretório ```/src/settin
 
 Para enviar suas alterações para o repositório, você deve criar um *merge request*. Existem duas formas de fazer isso. A primeira, é solcitar acesso ao repositório. Para isso, [entre em contato comigo via WhastApp](https://whats.link/carromeu). A segunda, é criando primeiramente seu próprio *fork* do projeto. Veja a [documentação do GitHub](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html) para maiores informações.
 
+## Deploy da Aplicação em Produção
+
+A [aplicação final](https://embrapa-status.github.io/) roda diretamente a partir do [GitHub Pages](https://pages.github.com/). Este, por sua vez, não faz o *auto deploy* da aplicação, sendo necessário tranformá-la em uma versão publicável, ou seja, realizar o *build* manual e subir os arquivos em HTML, JS e CSS puros. Assim, recomenda-se o seguinte processo:
+
+1. Faça o *clone* dos dois repositórios [desta *organization*](https://github.com/embrapa-status/) no mesmo diretório-pai, mantendo os nomes "**pwa**" para este repositório e renomeando para "**dist**" o [repositório de *deploy*](https://github.com/embrapa-status/embrapa-status.github.io);
+2. Realize as alterações nos arquivos (incluindo serviços, p.e., nos JSONs correspondentes) no código-fonte contido no diretório ```pwa``` e faça o *commit* e *push* destas alterações;
+3. Faça o *build* pelo comando ```npm run build```, de forma que os arquivos de *deploy* sejam atualizados no diretório "**dist**"; e
+4. Faça o *commit* e *push* do diretório "**dist**" e aguarde, pois a aplicação será automaticamente atualizada em poucos segundos.
+
 ## Informações Importantes
 
 A ferramenta é um [PWA](https://blog.rocketseat.com.br/pwa-o-que-e-quando-utilizar/) (do inglês, *Progressive Web Application*). Assim, todas as chamadas aos serviços remotos que estão sendo testados são realizados diretamente do dispositivo cliente em que a aplicação é instalada, ou seja, do dispositivo do usuário final. Não existe, portanto, um *backend* com uma aplicação remota associada a esta ferramenta. O [GitHub Pages](https://pages.github.com/), neste caso, faz papel apenas de servidor web, provendo os arquivos que são cacheados no dispositivo cliente, sem qualquer código *server-side*.
