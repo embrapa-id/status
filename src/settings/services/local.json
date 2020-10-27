@@ -13,32 +13,44 @@
             "url": "https://rs.cnpgc.embrapa.br"
         },
         {
-            "name": "Filestash",
-            "url": "https://box.cnpgc.embrapa.br"
-        },
-        {
-            "name": "Subversion",
-            "url": "https://svn.cnpgc.embrapa.br"
-        },
-        {
-            "name": "Projetos de Bioinformática",
-            "url": "https://bio.cnpgc.embrapa.br"
+            "name": "Servidor de Produção",
+            "url": "https://production.cnpgc.embrapa.br"
         },
         {
             "name": "API Backend",
             "url": "https://backend.cnpgc.embrapa.br"
         },
         {
-            "name": "API Sandbox",
-            "url": "https://sandbox.cnpgc.embrapa.br"
+            "name": "PWAs",
+            "url": "https://pwa.cnpgc.embrapa.br"
         },
         {
             "name": "Hotsites",
             "url": "https://cloud.cnpgc.embrapa.br"
         },
         {
+            "name": "Servidor de Homologação",
+            "url": "https://test.cnpgc.embrapa.br"
+        },
+        {
+            "name": "API Sandbox",
+            "url": "https://sandbox.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Filestash",
+            "url": "https://box.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Projetos de Bioinformática",
+            "url": "https://bio.cnpgc.embrapa.br"
+        },
+        {
             "name": "GitLab",
             "url": "https://git.cnpgc.embrapa.br"
+        },
+        {
+            "name": "Subversion",
+            "url": "https://svn.cnpgc.embrapa.br"
         },
         {
             "name": "Engeman",
@@ -47,6 +59,10 @@
         {
             "name": "OpenVPN",
             "url": "https://openvpn.cnpgc.embrapa.br:9443"
+        },
+        {
+            "name": "Home Assistant",
+            "url": "https://hass.cnpgc.embrapa.br"
         }
     ],
     "cnpgl": [
